@@ -731,13 +731,8 @@ ul { list-style: none; }
   width: 100%;
 }
 
-/* Behold widget overrides */
-#behold-widget {
-  --behold-columns: 4;
-  --behold-gap: 6px;
-  --behold-border-radius: 0px;
-  --behold-background: transparent;
-}
+/* Behold widget fills full width */
+[data-behold-id] { width: 100%; }
 
 .instagram__footer {
   display: flex;
@@ -936,7 +931,6 @@ ul { list-style: none; }
 =========================== */
 @media (max-width: 1024px) {
   .classes__grid { grid-template-columns: repeat(2, 1fr); }
-  #behold-widget { --behold-columns: 3; }
 }
 
 @media (max-width: 768px) {
@@ -971,7 +965,6 @@ ul { list-style: none; }
 
   .classes__grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
 
-  #behold-widget { --behold-columns: 2; }
 
   .contact__grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
