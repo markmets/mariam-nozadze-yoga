@@ -686,113 +686,71 @@ ul { list-style: none; }
 /* ===========================
    Instagram Feed
 =========================== */
-.instagram { background: var(--sage-dark); }
+.instagram { background: var(--cream); }
 
-.instagram .section__label { color: var(--sage-light); }
-.instagram .section__title { color: #fff; }
-.instagram .section__title em { color: var(--sage-light); }
+.instagram__hero {
+  display: flex;
+  align-items: center;
+  padding: clamp(4rem, 8vw, 7rem) 0 3rem;
+  width: var(--container);
+  margin-inline: auto;
+}
 
-.instagram__handle {
-  margin-bottom: 3rem;
+.instagram__hero-text {
+  max-width: 520px;
+}
+
+.instagram__hero-text .section__label { color: var(--sage); }
+.instagram__hero-text .section__title { color: var(--charcoal); margin-bottom: 1rem; }
+.instagram__hero-text .section__title em { color: var(--sage-dark); }
+
+.instagram__sub {
+  font-size: 0.95rem;
+  color: var(--mid);
+  margin-bottom: 1.8rem;
+  line-height: 1.7;
 }
 
 .instagram__handle-link {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-  padding-bottom: 0.1em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  border-bottom: 1.5px solid var(--sage-light);
+  padding-bottom: 0.2em;
   transition: color 0.3s, border-color 0.3s;
 }
-.instagram__handle-link:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+.instagram__handle-link:hover { color: var(--sage); border-color: var(--sage); }
 .instagram__handle-link svg { width: 16px; height: 16px; }
 
 .instagram__feed {
-  /* Behold widget styles itself; placeholder shown below */
+  width: 100%;
 }
 
 /* Behold widget overrides */
 #behold-widget {
   --behold-columns: 4;
-  --behold-gap: 8px;
+  --behold-gap: 6px;
   --behold-border-radius: 0px;
+  --behold-background: transparent;
 }
 
-.instagram__placeholder {
+.instagram__footer {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.instagram__placeholder-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 8px;
-}
-
-.instagram__tile {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 1;
-}
-
-.instagram__tile--wide {
-  grid-row: 1 / 3;
-  aspect-ratio: auto;
-}
-
-.instagram__tile-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.instagram__tile-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s var(--ease);
-}
-
-.instagram__tile:hover .instagram__tile-inner img { transform: scale(1.06); }
-
-.instagram__tile-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(30, 50, 35, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-  color: #fff;
+  padding: 2.5rem 0 clamp(4rem, 8vw, 7rem);
 }
 
-.instagram__tile-overlay svg { width: 24px; height: 24px; }
-.instagram__tile-overlay span { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
-.instagram__tile:hover .instagram__tile-overlay { opacity: 1; }
-
-.instagram__placeholder-cta {
-  text-align: center;
-}
-
-.instagram__placeholder-cta .btn {
+.instagram__footer .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
 }
-
-.instagram__placeholder-cta svg { width: 16px; height: 16px; }
+.instagram__footer svg { width: 16px; height: 16px; }
 
 /* ===========================
    Contact
@@ -978,8 +936,7 @@ ul { list-style: none; }
 =========================== */
 @media (max-width: 1024px) {
   .classes__grid { grid-template-columns: repeat(2, 1fr); }
-  .instagram__placeholder-grid { grid-template-columns: 1fr 1fr 1fr; }
-  .instagram__tile--wide { grid-row: auto; aspect-ratio: 1; }
+  #behold-widget { --behold-columns: 3; }
 }
 
 @media (max-width: 768px) {
@@ -1014,7 +971,7 @@ ul { list-style: none; }
 
   .classes__grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
 
-  .instagram__placeholder-grid { grid-template-columns: 1fr 1fr; }
+  #behold-widget { --behold-columns: 2; }
 
   .contact__grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }

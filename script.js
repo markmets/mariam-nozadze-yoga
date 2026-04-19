@@ -54,27 +54,6 @@ document.querySelectorAll('.reveal').forEach((el) => {
   revealObserver.observe(el);
 });
 
-// Hide placeholder once Behold widget renders real content
-const beholdWidget = document.getElementById('behold-widget');
-const placeholder = document.getElementById('instagramPlaceholder');
-
-if (beholdWidget && placeholder) {
-  const beholdObserver = new MutationObserver(() => {
-    if (beholdWidget.children.length > 0) {
-      placeholder.style.display = 'none';
-      beholdObserver.disconnect();
-    }
-  });
-  beholdObserver.observe(beholdWidget, { childList: true, subtree: true });
-
-  // Fallback: if still empty after 4s, keep placeholder visible
-  setTimeout(() => {
-    if (beholdWidget.children.length === 0) {
-      beholdObserver.disconnect();
-    }
-  }, 4000);
-}
-
 // Contact form
 const form = document.getElementById('contactForm');
 const success = document.getElementById('formSuccess');

@@ -276,91 +276,27 @@
   </section>
 
   <!-- Instagram Feed -->
-  <!--
-    HOW TO CONNECT THE REAL INSTAGRAM FEED:
-    1. Go to https://behold.so and sign up for a free account
-    2. Connect your Instagram account: @yoga.practice.with.mariam
-    3. Create a new feed and copy your Feed ID
-    4. Replace "YOUR_FEED_ID_HERE" below with your actual Feed ID
-    The widget will then display your latest posts and videos automatically.
-  -->
-  <section class="instagram section" id="instagram">
-    <div class="container">
-      <p class="section__label reveal center">Instagram</p>
-      <h2 class="section__title reveal center">Practice in<br /><em>Motion</em></h2>
-      <p class="instagram__handle reveal center">
+  <section class="instagram" id="instagram">
+    <div class="instagram__hero">
+      <div class="instagram__hero-text reveal">
+        <p class="section__label">Instagram</p>
+        <h2 class="section__title">Practice in<br /><em>Motion</em></h2>
+        <p class="instagram__sub">Real classes, real moments — follow along for daily practice.</p>
         <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__handle-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           @yoga.practice.with.mariam
         </a>
-      </p>
-
-      <!-- Behold Instagram widget — replace YOUR_FEED_ID_HERE after setup at behold.so -->
-      <div class="instagram__feed reveal" id="instagramFeed">
-        <div id="behold-widget" data-feed-id="4yfX2I1qqUCk27w1eNnr"></div>
-        <script src="https://w.behold.so/widget.js" type="module"></script>
-
-        <!-- Placeholder shown until Behold feed is configured -->
-        <div class="instagram__placeholder" id="instagramPlaceholder">
-          <div class="instagram__placeholder-grid">
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile instagram__tile--wide">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                  <span>View on Instagram</span>
-                </div>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=500&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=500&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=500&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="instagram__tile">
-              <div class="instagram__tile-inner">
-                <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=500&q=80" alt="Yoga practice" loading="lazy" />
-                <div class="instagram__tile-overlay">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="instagram__placeholder-cta">
-            <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="btn btn--light">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              Follow @yoga.practice.with.mariam
-            </a>
-          </div>
-        </div>
       </div>
+    </div>
+    <div class="instagram__feed reveal">
+      <div id="behold-widget" data-feed-id="4yfX2I1qqUCk27w1eNnr"></div>
+      <script src="https://w.behold.so/widget.js" type="module"></script>
+    </div>
+    <div class="instagram__footer reveal">
+      <a href="https://www.instagram.com/yoga.practice.with.mariam/" target="_blank" rel="noopener" class="btn btn--dark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        See More on Instagram
+      </a>
     </div>
   </section>
 
